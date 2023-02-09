@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+  int i;
+  double x,y;
+
+  x = 7;
+  // "uninitialized variables are in league with the devil"
+
+  for (i = 1; i <= 30; i++) {
+    
+    x = (-36 + pow(x,3))/30;
+    printf("%20.16lf\n", x);
+  }
+  y = pow(x,3) - 30*x - 36;
+  printf("%lf\n", y);
+  // fixed point iteration: reaching a point where the function converges
+  // not always going to work
+  
+}
